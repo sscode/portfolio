@@ -5,20 +5,34 @@ import WorkItemOlympics from './WorkItemOlympics';
 
 
 const history = [
-    {company: 'Fabrica', title: 'Title 1', description: 'Description 1'},
-    {company: 'Sorse', title: 'Title 2', description: 'Description 2'},
-    {company: 'Dreamchat', title: 'Title 3', description: 'Description 3'},
+    {company: 'Fabrica', title: 'Head of Marketing', url: 'https://www.fabrica.land/'},
+    {company: 'Sorse', title: 'Head of Sales & Marketing', url: 'https://sorsetech.com/'},
+]
+
+const projects = [
+    {company: 'Dreamchat', title: 'Full Stack Development', url: 'https://dreamchat.xyz/'},
 ]
 
 class Worklist extends Component {
 
     render() {
         return (
-            <div>
+            <div className='worklist_container'>
+                <p className='worklist_text'>Work History</p>
                 {history.map((item, index) => {
-                    return <WorkItem key={index} company={item.company} title={item.title} description={item.description} />
+                    return <WorkItem
+                    type='history' 
+                    key={index} company={item.company} title={item.title} url={item.url} />
                 })}
+                <p className='worklist_text'>Dev Projects</p>
+                {projects.map((item, index) => {
+                    return <WorkItem 
+                    type='projects'
+                    key={index} company={item.company} title={item.title} url={item.url} />
+                })}
+                <p className='worklist_text'>Achievements</p>
                 <WorkItemOlympics />
+                <p className='worklist_text'>More</p>
                 <Connect />
             </div>
         );

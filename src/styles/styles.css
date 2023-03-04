@@ -15,11 +15,14 @@
 }
 
 :root {
+    background: var(--main-bg);
   --main-bg: #020311;
   --main-primary: #230555;
   --main-primary-middle: #3D177D;
   --main-primary-light: #5700E4;
   --main-primary-light2: #813feb;
+  --main-primary-other: #ff9e2f;
+  --main-primary-other2: rgb(250, 185, 112);
   --main-white: #fff;
   --main-accent: #FF27C3;
   --main-grey: rgba(241, 241, 241, 0.825);
