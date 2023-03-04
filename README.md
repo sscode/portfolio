@@ -1,4 +1,4 @@
-# Hi I'm Stuart Sim
+# Hi, I'm Stuart Sim
 
 Thanks for checking out my portfolio page.
 
