@@ -1,5 +1,6 @@
 .worklist_container {
     padding-bottom: 2rem;
+    max-width: 12rem;
 }
 
 .worklist_container a {
@@ -76,4 +77,10 @@
     background-color: var(--main-green);
     border: 1px solid var(--main-green);
     color: var(--main-black);
+}
+
+@media (max-width: 600px) {
+    .workitem_container {
+        padding: .5rem;
+    }
 }

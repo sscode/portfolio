@@ -45,3 +45,14 @@
     justify-content: space-between;
     min-height: 100vh;
 }
+
+@media (max-width: 600px) {
+    .App {
+        max-height: 90vh;
+    }
+
+    .container {
+        padding: 0 2rem;
+        min-height: 90vh;
+    }
+}
