@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Connect from './Connect';
 import WorkItem from './WorkItem';
 import WorkItemOlympics from './WorkItemOlympics';
 
@@ -18,6 +19,7 @@ class Worklist extends Component {
                     return <WorkItem key={index} company={item.company} title={item.title} description={item.description} />
                 })}
                 <WorkItemOlympics />
+                <Connect />
             </div>
         );
     }

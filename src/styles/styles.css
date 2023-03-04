@@ -11,7 +11,7 @@
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
+    font-weight: 600;
 }
 
 :root {
@@ -19,6 +19,7 @@
   --main-primary: #230555;
   --main-primary-middle: #3D177D;
   --main-primary-light: #5700E4;
+  --main-primary-light2: #813feb;
   --main-white: #fff;
   --main-accent: #FF27C3;
   --main-grey: rgba(241, 241, 241, 0.825);
@@ -28,7 +29,6 @@
 
 .App {
     background: var(--main-bg);
-    color: var(--main-white);
     height: auto;
     min-height: 100vh;
 
