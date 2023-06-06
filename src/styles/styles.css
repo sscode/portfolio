@@ -46,6 +46,32 @@
     min-height: 100vh;
 }
 
+.button {
+    background-color: #5ef663;
+    width: 10rem;
+    padding: .5rem;
+    border-radius: .5rem;
+    border: none;
+    margin-bottom: 3rem;
+}
+
+.button:hover {
+    background-color: #3dce3d;
+    cursor: pointer;
+}
+
+.button:active {
+    background-color: #2f9e2f;
+}
+
+.button-text {
+    color: var(--main-bg);
+}
+
+.strava-h1 {
+    color: #fff;
+}
+
 @media (max-width: 600px) {
     .App {
         max-height: 90vh;

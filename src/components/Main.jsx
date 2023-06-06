@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import Hero from './Hero';
-import Worklist from './Work/Worklist';
+import MainConnect from './Work/MainConnect';
+import Worklist from './Work/MainConnect';
 
 class Main extends Component {
     render() {
         return (
             <div className='container'>
                 <Hero />
-                <Worklist />
+                <MainConnect />
             </div>
         );
     }
