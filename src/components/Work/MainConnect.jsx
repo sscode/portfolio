@@ -35,13 +35,22 @@ function MainConnect() {
 
   useEffect(() => {
     if (accessToken) {
+        const activityMax = 30;
         const getActivities = async () => {
-            const response = await axios.get(`https://www.strava.com/api/v3/athlete/activities?access_token=${accessToken}`);
-            setWorkouts(response.data);
+            let page = 1;
+            let activities = [];
+            while (page <= 3) {
+                const response = await axios.get(`https://www.strava.com/api/v3/athlete/activities?access_token=${accessToken}&per_page=${activityMax}&page=${page}`);
+                activities = activities.concat(response.data);
+                page++;
+            }
+            setWorkouts(activities);
         }
         getActivities();
     }
-    }, [accessToken]);
+}, [accessToken]);
+
+
 
 
   return (

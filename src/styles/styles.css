@@ -1,5 +1,6 @@
 @import 'hero-styles.css';
 @import 'work-styles.css';
+@import 'filter-styles.css';
 
 
 *,
@@ -52,7 +53,6 @@
     padding: .5rem;
     border-radius: .5rem;
     border: none;
-    margin-bottom: 3rem;
 }
 
 .button:hover {

@@ -7,14 +7,14 @@ const formatSecondsToPace = (value) => {
     return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
   }
   
-const RunsChart = ({ runs }) => {
+const RunsChart = ({ runs, distanceMin, distanceMax, speedMin, speedMax }) => {
 
     const runsWithPaceInSeconds = runs.map(run => {
         const [minutes, seconds] = run.pace.split(':').map(Number);
         return { ...run, paceInSeconds: minutes * 60 + seconds };
       });
 
-    const paceBracket = 30
+    const paceBracket = 0
 
     // Calculate min and max paceInSeconds
     const minPaceInSeconds = Math.min(...runsWithPaceInSeconds.map(run => run.paceInSeconds)) - paceBracket;

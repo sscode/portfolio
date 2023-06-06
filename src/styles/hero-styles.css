@@ -1,8 +1,9 @@
 .heroText {
-    font-size: 7rem;
+    font-size: 4rem;
     color: var(--main-white);
-    line-height: .4;
+    line-height: .2;
     margin-top: 3rem;
+    margin-left: 1rem;
 }
 
 @media (max-width: 600px) {

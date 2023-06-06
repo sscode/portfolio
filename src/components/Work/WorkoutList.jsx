@@ -1,12 +1,27 @@
 import React from 'react'
+import { useState } from 'react';
+import Filters from './Filters';
 import RunsChart from './RunsChart'
 import WorkoutItem from './WorkoutItem'
 
 function WorkoutList({workouts}) {
 
-    //filter to only runs
-    const runs = workouts.filter(workout => workout.sport_type === 'Run')
+  const [filters, setFilters] = useState({
+    distanceMin: 0,
+    distanceMax: 20000,
+    speedMin: '3:10',
+    speedMax: '5:40'
+  });
 
+  const handleFilterChange = (newFilters) => {
+    setFilters(newFilters);
+  };
+
+    //filter to only runs and distance
+    const runs = workouts.filter(workout => workout.sport_type === 'Run' && workout.distance >= filters.distanceMin && workout.distance <= filters.distanceMax);
+
+
+    //get pace
     runs.forEach(run => {
         const distanceInKm = run.distance / 1000; // Convert distance to kilometers
         const paceInSeconds = run.moving_time / distanceInKm; // Calculate pace in seconds per kilometer
@@ -20,21 +35,43 @@ function WorkoutList({workouts}) {
         run.pace = `${minutes}:${seconds.toString().padStart(2, '0')}`; // Format pace as "minutes:seconds"
       });
 
-    const fastRuns = runs.filter(run => run.minutes < 6)
+      //filter by pace
+      const stringToSeconds = (time) => {
+        const [minutes, seconds] = time.split(':').map(Number);
+        return minutes * 60 + seconds;
+      };
+
+      const calculatePace = (moving_time, distance) => {
+        const pace = moving_time / (distance / 1000); // pace in seconds per kilometer
+        return pace;
+      };
+      
+
+      const speedMinInSeconds = stringToSeconds(filters.speedMin);
+      const speedMaxInSeconds = stringToSeconds(filters.speedMax);
+
+      const fastRuns = runs.filter(run => {
+        const runPaceInSeconds = calculatePace(run.moving_time, run.distance);
+        return runPaceInSeconds >= speedMinInSeconds && runPaceInSeconds <= speedMaxInSeconds;
+      });
+      
+
+      
+
+    // const fastRuns = runs.filter(run => run.minutes < 6)
+    
 
     console.log(fastRuns)
 
   return (
     <>
-    <div>
-        {/* <h1
-        className='strava-h1'
-        >Workout List</h1> */}
-    </div>
-    <RunsChart runs={fastRuns.reverse()} />
-    {/* {runs.map((workout) => (
-        <WorkoutItem workout={workout} />
-    ))} */}
+      <Filters filters={filters} onFilterChange={handleFilterChange} />
+      <RunsChart 
+      distanceMin={filters.distanceMin}
+      distanceMax={filters.distanceMax}
+      speedMin={filters.speedMin}
+      speedMax={filters.speedMax}
+      runs={fastRuns.reverse()} />
     </>
     )
 }
