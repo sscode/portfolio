@@ -3,9 +3,8 @@ import React, { Component } from 'react';
 class Hero extends Component {
     render() {
         return (
-            <div>
-                <h1 className='heroText'>Stuart's</h1>
-                <h1 className='heroText'>Strava</h1>
+            <div className='hero-container'>
+                <h1 className='heroText'>TrainingStats</h1>
             </div>
         );
     }

@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react';
 import Filters from './Filters';
 import RunsChart from './RunsChart'
+import RunsTable from './RunsTable';
 import WorkoutItem from './WorkoutItem'
 
 function WorkoutList({workouts}) {
@@ -31,6 +32,7 @@ function WorkoutList({workouts}) {
 
         run.minutes = minutes
         run.seconds = seconds
+        run.paceSeconds = paceInSeconds
       
         run.pace = `${minutes}:${seconds.toString().padStart(2, '0')}`; // Format pace as "minutes:seconds"
       });
@@ -56,23 +58,22 @@ function WorkoutList({workouts}) {
       });
       
 
-      
-
     // const fastRuns = runs.filter(run => run.minutes < 6)
     
 
     console.log(fastRuns)
 
   return (
-    <>
+    <div className='data-container'>
       <Filters filters={filters} onFilterChange={handleFilterChange} />
-      <RunsChart 
+      <RunsTable runs={fastRuns} />
+      {/* <RunsChart 
       distanceMin={filters.distanceMin}
       distanceMax={filters.distanceMax}
       speedMin={filters.speedMin}
       speedMax={filters.speedMax}
-      runs={fastRuns.reverse()} />
-    </>
+      runs={fastRuns.reverse()} /> */}
+    </div>
     )
 }
 

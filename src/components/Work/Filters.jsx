@@ -16,14 +16,14 @@ function Filters({ filters, onFilterChange }) {
   };
 
   return (
-    <div className='filterContainer'>
+    <div className='filter-container'>
+            <h2 className='filter-titles'>Distance Bands (meters)</h2>
         <div className='filter'>
-            <h2 className='filter-titles'>Distance Bands</h2>
             <input className='filter-input' type='text' id='distanceMin' name='distanceMin' value={localFilters.distanceMin} onChange={handleInputChange} />
             <input className='filter-input' type='text' id='distanceMax' name='distanceMax' value={localFilters.distanceMax} onChange={handleInputChange} />
         </div>
+        <h2 className='filter-titles'>Speed Bands</h2>
         <div className='filter'>
-            <h2 className='filter-titles'>Speed Bands</h2>
             <input className='filter-input' type='text' id='speedMin' name='speedMin' value={localFilters.speedMin} onChange={handleInputChange} />
             <input className='filter-input' type='text' id='speedMax' name='speedMax' value={localFilters.speedMax} onChange={handleInputChange} />
         </div>

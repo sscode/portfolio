@@ -1,6 +1,7 @@
 @import 'hero-styles.css';
 @import 'work-styles.css';
 @import 'filter-styles.css';
+@import 'table-styles.css';
 
 
 *,
@@ -25,9 +26,13 @@
   --main-primary-other: #ff9e2f;
   --main-primary-other2: rgb(250, 185, 112);
   --main-white: #fff;
+  --main-white-light: rgba(255, 255, 255, 0.635);
   --main-accent: #FF27C3;
   --main-grey: rgba(241, 241, 241, 0.825);
   --main-green: #5ef663;
+  --main-green-dark: #008204;
+  --main-green-light: #9afa9d;
+
   --main-red: rgb(255, 99, 99);
 }
 
@@ -40,15 +45,25 @@
 
 .container {
     margin: 0 auto;
-    padding: 0 5rem;
+    /* padding: 0 5rem; */
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    /* min-height: 100vh; */
+}
+
+.data-container {
+    /* background-color: #230555; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .button {
-    background-color: #5ef663;
+    background-color: var(--main-green);
     width: 10rem;
     padding: .5rem;
     border-radius: .5rem;

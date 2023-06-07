@@ -1,16 +1,22 @@
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: var(--main-green-dark);
+    padding: 1rem;
+    margin-bottom: 3rem;
+}
+
 .heroText {
     font-size: 4rem;
     color: var(--main-white);
-    line-height: .2;
-    margin-top: 3rem;
-    margin-left: 1rem;
+    /* margin-left: 1rem; */
 }
 
 @media (max-width: 600px) {
     .heroText {
-        max-width: 100vw;
-        font-size: 5rem;
-        line-height: .7;
         margin-top: 1rem;
     }
 }
