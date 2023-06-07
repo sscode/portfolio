@@ -83,17 +83,27 @@
     color: var(--main-bg);
 }
 
-.strava-h1 {
-    color: #fff;
+.loader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.loader-text {
+    color: var(--main-white);
+    font-size: .7rem;
+    font-style: italic;
+    margin-top: 1rem;
 }
 
 @media (max-width: 600px) {
     .App {
-        max-height: 90vh;
+        /* max-height: 90vh; */
+        /* padding: 0 1rem; */
     }
 
     .container {
-        padding: 0 2rem;
-        min-height: 90vh;
+        /* min-height: 90vh; */
     }
 }

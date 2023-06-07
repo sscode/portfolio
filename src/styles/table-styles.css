@@ -36,3 +36,22 @@ tr:hover {
     background-color: var(--main-green-dark);
     cursor: pointer;
 }
+
+@media (max-width: 600px) {
+    .table {
+        font-size: .8rem;
+    }
+
+    thead {
+        font-size: .8rem;
+    }
+
+    th {
+        padding: .5rem;
+    }
+
+    td {
+        padding: .5rem;
+    }
+
+}

@@ -2,6 +2,7 @@ import axios from 'axios';
 import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
+import { ClipLoader } from 'react-spinners';
 import WorkoutList from './WorkoutList';
 
 function MainConnect() {
@@ -61,14 +62,25 @@ function MainConnect() {
       </>
       : 
       <>
-        <h1 className='strava-h1'>Access Token: {accessToken}</h1>
-          <div 
+        {accessToken ?
+
+          <div className='loader'>
+            <ClipLoader
+            color={'#fff'}
+            loading={true}
+            size={30}
+            />
+            <h1 className='loader-text'>...getting workouts...</h1>
+          </div>
+
+      :
+          <button 
           onClick={buttonHandler}
           className='button'>
-              <p className='button-text'>Connect</p>
-          </div> 
+              Connect
+          </button> 
+      }
       </>
-      
       }
     </div>
   )

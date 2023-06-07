@@ -16,7 +16,10 @@
 }
 
 @media (max-width: 600px) {
-    .heroText {
-        margin-top: 1rem;
+
+
+    .heroText { 
+        /* margin-top: 1rem; */
+        font-size: 2rem;
     }
 }
