@@ -46,6 +46,10 @@
     min-height: 100vh;
 }
 
+.darkbg-text {
+    color: var(--main-white);
+}
+
 @media (max-width: 600px) {
     .App {
         max-height: 90vh;

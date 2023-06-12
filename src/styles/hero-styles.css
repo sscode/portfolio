@@ -1,8 +1,25 @@
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    /* background-color: aqua; */
+    background-color: var(--main-bg);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    padding-bottom: 2rem;
+    margin-left: -2rem;
+    /* height: 100vh; */
+}
+
 .heroText {
     font-size: 5rem;
     color: var(--main-white);
     line-height: .4;
     margin-top: 2rem;
+    margin-left: 2rem;
 }
 
 @media (max-width: 600px) {
