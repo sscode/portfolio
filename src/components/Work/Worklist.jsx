@@ -11,6 +11,8 @@ const history = [
 
 const projects = [
     {company: 'Dreamchat', title: 'Full Stack Development', url: 'https://dreamchat.xyz/'},
+    {company: 'TrainingStats', title: 'Full Stack Development', url: 'https://trainingstats.xyz/'},
+    {company: 'ErgBase', title: 'Full Stack Development', url: 'https://ergbase.com/'},
 ]
 
 class Worklist extends Component {
