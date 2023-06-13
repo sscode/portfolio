@@ -1,4 +1,5 @@
 import React from 'react'
+import { BiLinkExternal } from 'react-icons/bi'
 
 function WorkLink({url}) {
   return (
@@ -8,7 +9,7 @@ function WorkLink({url}) {
         target='_blank'
         rel='noopener noreferrer'
         href={url}>
-            <p className='work-link'>View Company</p>
+            <BiLinkExternal className='work-link' />
         </a>
     </div>
   )

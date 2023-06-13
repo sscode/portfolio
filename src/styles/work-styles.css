@@ -104,11 +104,11 @@
 }
 
 .work-link {
-    color: var(--main-white);
+    color: var(--main-green);
     font-size: .8rem;
     margin-top: .5rem;
     margin-bottom: .5rem;
-    text-decoration: underline;
+    /* text-decoration: underline; */
 }
 
 @media (max-width: 600px) {
