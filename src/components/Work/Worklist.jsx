@@ -7,7 +7,7 @@ import WorkItemOlympics from './WorkItemOlympics';
 const history = [
     {company: 'Fabrica', 
     companyTag: 'Fabrica makes real estate transactions as easy as buying NFTs.',
-    description: `I'm working on branding, positioning, messaging, content and partnerships.`,
+    description: `Venture backed crypto startup. I worked on branding, positioning, messaging, content and partnerships.`,
     title: 'Head of Marketing', url: 'https://www.fabrica.land/'},
     {company: 'Sorse', 
     companyTag: 'Food Science Company for Cannabis Brands',
