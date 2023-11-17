@@ -32,26 +32,29 @@
 
 .App {
     background: var(--main-bg);
-    height: auto;
-    min-height: 100vh;
+    margin: 0 auto;
+    /* height: auto;
+    min-height: 100vh; */
 
 }
 
 .container {
-    margin: 0 auto;
-    padding: 0 5rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    /* min-height: 100vh; */
 }
 
 .darkbg-text {
     color: var(--main-white);
+    max-width: 20rem;
 }
 
 .bio_box {
-    width: 30rem;
+    max-width: 20rem;
+    text-align: justify;
+    /* width: 30rem; */
     /* background-color: #3D177D; */
 }
 

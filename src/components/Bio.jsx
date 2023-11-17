@@ -3,7 +3,7 @@ import React from 'react'
 function Bio() {
   return (
     <div className='bio_box'>
-        <p className='worklist_text'>About Me</p>
+        {/* <p className='worklist_text'>About Me</p> */}
         <p className='bio_text'>
             I'm a full stack developer with a background in marketing.
 
