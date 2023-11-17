@@ -19,6 +19,26 @@ const history = [
 ]
 
 const projects = [
+    {company: 'Finlister', 
+    companyTag: 'Weekly portfolio updates straight to your inbox.',
+    description: `
+    This is a saas app for tracking the stock market.
+    I designed this in Figma and used no design kits.
+    The front-end is built with React, and Redux for statemanagement.
+    The back-end is NodeJS and Firebase and emails are sent through Sendgrid.
+    `,
+    title: 'Full Stack Development', url: 'https://finlister.com/'},
+
+    {company: 'Prolift', 
+    companyTag: 'Track Lifts. Get Strong.',
+    description: `
+    This is an iOS app to track gym workouts. Currently live in the Appstore.
+    I designed this in Figma and used no design kits.
+    The front-end is built with ReactNative.
+    The back-end is serverless through Firebase.
+    `,
+    title: 'Full Stack Development', url: 'https://www.proliftapp.com/'},
+
     {company: 'Dreamchat', 
     companyTag: 'A web3 wallet-to-wallet messaging platform',
     description: `
@@ -27,6 +47,7 @@ const projects = [
     The back-end is serverless and built exclusively on Firebase.
     `,
     title: 'Full Stack Development', url: 'https://dreamchat.xyz/'},
+    
     {company: 'ErgBase', 
     companyTag: 'Converts rowing maching workouts into data',
     description: `
@@ -35,6 +56,7 @@ const projects = [
     The front-end of the website is built with React and the App is built with React Native. I managed the builds and submission to the App Store through Expo.
     The back-end is data is serverless and built on Firebase with photos stored on Cloudinary. Additionally I have a python server to manage the photo manipulation functions through AWS.
     `,    title: 'Full Stack Development', url: 'https://ergbase.com/'},
+    
     {company: 'TrainingStats', 
     companyTag: 'Analyze your Strava workouts',
     description: `

@@ -50,6 +50,18 @@
     color: var(--main-white);
 }
 
+.bio_box {
+    width: 30rem;
+    /* background-color: #3D177D; */
+}
+
+.bio_text {
+    color: var(--main-white);
+    font-size: 1rem;
+    margin-bottom: 1rem;
+
+}
+
 @media (max-width: 600px) {
     .App {
         max-height: 90vh;
